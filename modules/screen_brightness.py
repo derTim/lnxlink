@@ -28,7 +28,7 @@ class Addon():
         print(results)
         results = results.strip().split(',')[0].strip()
         print(results)
-        results = results.strip().repalce('current value =','').strip()
+        results = results.strip().replace('current value =','').strip()
         print(results)
         
         
