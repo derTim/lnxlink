@@ -200,7 +200,8 @@ class LNXlink():
                                 discovery["payload_off"] = "OFF"
                                 discovery["payload_on"] = "ON"
                             elif options['type'] == 'number':
-                                continue
+                                discovery["state_topic"] = f"{self.pref_topic}/{self.config['mqtt']['statsPrefix']}/{subtopic}"
+                                discovery["command_topic"] = f"{self.pref_topic}/commands/{service}/{control_name}/"
                             else:
                                 continue
                             self.client.publish(
