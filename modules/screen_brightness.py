@@ -19,7 +19,7 @@ class Addon():
 
     def getInfo(self):
         stdout = subprocess.run(
-            "ddcutil getvcp 10 --bus 21'",
+            "ddcutil getvcp 10 --bus 21",
             shell=True,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE).stdout.decode("UTF-8")
