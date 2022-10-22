@@ -37,4 +37,4 @@ class Addon():
         return status
 
     def startControl(self, topic, data):
-        subprocess.call('ddcutil setvcp 10 ' + data + ' --bus 21', shell=True)
+        subprocess.call('ddcutil setvcp 10 ' + str(data) + ' --bus 21', shell=True)
