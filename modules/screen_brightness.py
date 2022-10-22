@@ -24,8 +24,15 @@ class Addon():
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE).stdout.decode("UTF-8")
         results = stdout.lower()
+        results = results.strip().split(':')[1].strip()
         print(results)
-        status = results.strip().replace('VCP code 0x10 (Brightness                    ): current value =   ', '').replace(', max value =   100','').strip()
+        results = results.strip().split(',')[0].strip()
+        print(results)
+        results = results.strip().repalce('current value =','').strip()
+        print(results)
+        
+        
+
         return status
 
     def startControl(self, topic, data):
