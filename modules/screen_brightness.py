@@ -28,8 +28,8 @@ class Addon():
         print(results)
         results = results.strip().split(',')[0].strip()
         print(results)
-        results = results.strip().replace('current value =','').strip()
-        print(results)
+        status = results.strip().replace('current value =','').strip()
+        print(status)
         
         
 
