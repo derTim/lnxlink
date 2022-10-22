@@ -6,6 +6,7 @@ class Addon():
     icon = 'mdi:monitor'
     unit = '%'
     sensor_type = 'number'
+    type = 'number'
 
     def exposedControls(self):
         return {
