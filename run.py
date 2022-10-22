@@ -173,7 +173,7 @@ class LNXlink():
                         discovery['json_attributes_template'] = "{{ value_json | tojson }}"
 
                     sensor_type = getattr(addon, 'sensor_type', 'sensor')
-                    if sensor_type in ['binary_sensor', 'sensor']:
+                    if sensor_type in ['binary_sensor', 'sensor', 'number']:
                         self.client.publish(
                             f"homeassistant/{sensor_type}/lnxlink/{discovery['unique_id']}/config",
                             payload=json.dumps(discovery),
