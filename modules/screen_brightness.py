@@ -5,7 +5,7 @@ class Addon():
     name = 'Screen Brightness'
     icon = 'mdi:monitor'
     unit = '%'
-    sensor_type = 'sensor'
+    sensor_type = 'number'
 
     def exposedControls(self):
         return {
